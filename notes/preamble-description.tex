@@ -1,0 +1,16 @@
+
+
+% making the description with hyperlink
+\usepackage{enumitem}
+\makeatletter
+\def\namedlabel#1#2{\begingroup
+    #2%
+    \def\@currentlabel{#2}%
+    \phantomsection\label{#1}\endgroup
+}
+\makeatother
+
+% how to use
+% \begin{description}[style=multiline, labelwidth=1cm, leftmargin=2.0cm]
+%     \item[\namedlabel{itm:asumptions-p1}{$(\mathcal{P}_1)$}] 
+% \end{description}
